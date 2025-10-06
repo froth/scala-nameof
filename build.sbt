@@ -1,6 +1,6 @@
 ThisBuild / organization := "com.github.dwickern"
 
-lazy val scala3 = "3.3.5"
+lazy val scala3 = "3.3.6"
 lazy val scala213 = "2.13.16"
 lazy val scala212 = "2.12.20"
 
@@ -27,14 +27,14 @@ lazy val nameof = (projectMatrix in file("."))
   )
   .jvmPlatform(scalaVersions = Seq(scala3), Seq(
     libraryDependencies ++= Seq(
-      "org.typelevel" %% "shapeless3-test" % "3.4.3" % Test,
+      "org.typelevel" %% "shapeless3-test" % "3.5.0" % Test,
     )
   ))
   .jvmPlatform(scalaVersions = Seq(scala213, scala212), Seq(
     libraryDependencies ++= Seq(
       "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided,
       "org.scala-lang" % "scala-compiler" % scalaVersion.value % Provided,
-      "com.chuusai" %% "shapeless" % "2.3.12" % Test,
+      "com.chuusai" %% "shapeless" % "2.3.13" % Test,
     ),
   ))
 
